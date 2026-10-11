@@ -1,0 +1,11 @@
+// ==========================================================
+//  main.scss — entry point (7-1 pattern, memakai @use)
+//  Urutan @use menentukan urutan output CSS.
+// ==========================================================
+@use 'vendors';
+@use 'abstracts';   // hanya variables/functions/mixins (tidak menghasilkan CSS)
+@use 'base';
+@use 'layout';
+@use 'components';
+@use 'pages';
+@use 'themes';

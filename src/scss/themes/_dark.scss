@@ -1,0 +1,10 @@
+@use '../abstracts' as *;
+
+// Dark mode: override CSS custom properties dengan @each
+@media (prefers-color-scheme: dark) {
+  :root {
+    @each $name, $value in $colors-dark {
+      --#{$name}: #{$value};
+    }
+  }
+}

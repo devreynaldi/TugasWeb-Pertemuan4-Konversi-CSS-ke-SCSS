@@ -1,0 +1,15 @@
+@use '../abstracts' as *;
+
+#keahlian {
+  article {
+    background: theme('surface-2');
+    border-left: 4px solid theme('blue');
+    border-radius: $radius-sm;
+    padding: space('md');
+    margin-bottom: space('md');
+
+    h3 { margin-top: 0; }
+
+    &:last-child { margin-bottom: 0; }
+  }
+}

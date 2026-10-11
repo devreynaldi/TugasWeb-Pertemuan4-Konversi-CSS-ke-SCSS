@@ -1,0 +1,8 @@
+@use '../abstracts' as *;
+
+// Generate CSS custom properties dari map $colors dengan @each
+:root {
+  @each $name, $value in $colors {
+    --#{$name}: #{$value};
+  }
+}

@@ -1,0 +1,18 @@
+@use 'sass:map';
+@use 'variables' as v;
+
+// Ambil warna sebagai CSS custom property: theme('bg') -> var(--bg)
+@function theme($name) {
+  @if not map.has-key(v.$colors, $name) {
+    @error 'Warna "#{$name}" tidak ada di $colors.';
+  }
+  @return var(--#{$name});
+}
+
+// Ambil nilai spacing: space('md') -> 1rem
+@function space($key) {
+  @if not map.has-key(v.$spacing, $key) {
+    @error 'Spacing "#{$key}" tidak ada di $spacing.';
+  }
+  @return map.get(v.$spacing, $key);
+}

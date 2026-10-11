@@ -1,0 +1,22 @@
+@use '../abstracts' as *;
+
+form p {
+  @include flex-layout(column, space('xs'));
+  margin-bottom: space('md');
+}
+
+label {
+  font-size: .85rem;
+  font-weight: 600;
+  color: theme('blue-lt');
+}
+
+input,
+textarea {
+  @include form-control;
+
+  &:focus {
+    outline: none;
+    border-color: theme('blue-lt');
+  }
+}

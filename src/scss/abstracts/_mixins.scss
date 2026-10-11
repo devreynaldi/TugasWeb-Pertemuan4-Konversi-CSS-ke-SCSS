@@ -1,0 +1,41 @@
+@use 'sass:map';
+@use 'variables' as v;
+@use 'functions' as f;
+
+// MIXIN 1: flexbox reusable
+@mixin flex-layout($direction: row, $gap: 0, $wrap: nowrap) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  gap: $gap;
+}
+
+// MIXIN 2: tampilan kartu
+@mixin card($padding: f.space('lg')) {
+  background: f.theme('surface');
+  border: 1px solid f.theme('border');
+  border-radius: v.$radius;
+  padding: $padding;
+}
+
+// MIXIN 3: media query responsive (max-width)
+@mixin respond-down($bp) {
+  @media (max-width: map.get(v.$breakpoints, $bp)) {
+    @content;
+  }
+}
+
+// MIXIN 4: transisi
+@mixin transition($props: all) {
+  transition: $props v.$transition;
+}
+
+// MIXIN 5: gaya input form
+@mixin form-control {
+  background: f.theme('bg');
+  color: f.theme('text');
+  border: 1px solid f.theme('border');
+  border-radius: v.$radius-sm;
+  padding: f.space('sm') .8rem;
+  font: inherit;
+}

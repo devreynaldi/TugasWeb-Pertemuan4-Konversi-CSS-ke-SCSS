@@ -1,0 +1,17 @@
+@use '../abstracts' as *;
+
+section,
+aside {
+  @include card;
+}
+
+aside {
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+  background: linear-gradient(160deg, theme('surface-2'), theme('surface'));
+
+  @include respond-down('md') {
+    position: static;
+  }
+}

@@ -1,0 +1,38 @@
+@use '../abstracts' as *;
+
+h2 {
+  color: theme('blue-lt');
+  font-size: 1.5rem;
+  border-bottom: 2px solid theme('blue');
+  padding-bottom: .5rem;
+  margin-bottom: space('md');
+}
+
+h3 {
+  color: $white;
+  margin: .8rem 0 .3rem;
+}
+
+p {
+  color: theme('muted');
+  margin-bottom: space('sm');
+}
+
+ul {
+  list-style: none;
+  margin-top: .5rem;
+}
+
+li {
+  padding: space('xs') 0;
+
+  &::before {
+    content: '▸ ';
+    color: theme('blue-lt');
+  }
+}
+
+figcaption {
+  font-size: .8rem;
+  font-style: italic;
+}
