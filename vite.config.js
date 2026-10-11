@@ -1,9 +1,10 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
+  base: '/TugasWeb-Pertemuan4-Konversi-CSS-ke-SCSS/',
   css: {
     preprocessorOptions: {
-      scss: { api: 'modern-compiler' }, // pakai Dart Sass modern API
+      scss: { api: 'modern-compiler' },
     },
   },
 });
